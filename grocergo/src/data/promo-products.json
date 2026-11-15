@@ -1,0 +1,1099 @@
+[
+  {
+    "id": 1,
+    "sku": "GT100",
+    "name": "Green Tea 100g",
+    "price": 220.0,
+    "old_price": 0,
+    "image": "/images/products/beverages/mint-tea.webp",
+    "category": "Beverages",
+    "section": "beverages",
+    "search_words": [
+      "green tea g",
+      "green tea 100g",
+      "green tea",
+      "tea",
+      "healthy",
+      "antioxidant"
+    ]
+  },
+  {
+    "id": 2,
+    "sku": "TULSI",
+    "name": "Tulsi Green Tea 100g",
+    "price": 240.0,
+    "old_price": 0,
+    "image": "/images/products/dietary/detox.webp",
+    "category": "Beverages",
+    "section": "beverages",
+    "search_words": [
+      "tulsi green tea g",
+      "tulsi green tea 100g",
+      "green tea",
+      "tea",
+      "tulsi",
+      "herbal"
+    ]
+  },
+  {
+    "id": 3,
+    "sku": "MNG1L",
+    "name": "Mango Juice 1L",
+    "price": 120.0,
+    "old_price": 0,
+    "image": "/images/products/beverages/mango-juice.webp",
+    "category": "Beverages",
+    "section": "beverages",
+    "search_words": [
+      "mango juice l",
+      "mango juice 1l",
+      "juice",
+      "mango",
+      "fruit drink"
+    ]
+  },
+  {
+    "id": 4,
+    "sku": "BT250",
+    "name": "Assam Black Tea 250g",
+    "price": 180.0,
+    "old_price": 0,
+    "image": "/images/products/beverages/black-teas.webp",
+    "category": "Beverages",
+    "section": "beverages",
+    "search_words": [
+      "assam black tea g",
+      "assam black tea 250g",
+      "black tea",
+      "tea",
+      "chai"
+    ]
+  },
+  {
+    "id": 5,
+    "sku": "COF200",
+    "name": "Filter Coffee 200g",
+    "price": 260.0,
+    "old_price": 0,
+    "image": "/images/products/essentials/coffee-beans.webp",
+    "category": "Beverages",
+    "section": "beverages",
+    "search_words": [
+      "filter coffee g",
+      "filter coffee 200g",
+      "coffee",
+      "filter coffee"
+    ]
+  },
+  {
+    "id": 6,
+    "sku": "OJ1L",
+    "name": "Orange Juice 1L",
+    "price": 140.0,
+    "old_price": 0,
+    "image": "/images/products/beverages/orange-juice.webp",
+    "category": "Beverages",
+    "section": "beverages",
+    "search_words": [
+      "orange juice l",
+      "orange juice 1l",
+      "juice",
+      "orange",
+      "breakfast"
+    ]
+  },
+  {
+    "id": 7,
+    "sku": "CW500",
+    "name": "Tender Coconut Water 500ml",
+    "price": 70.0,
+    "old_price": 0,
+    "image": "/images/products/beverages/coconut-water.webp",
+    "category": "Beverages",
+    "section": "beverages",
+    "search_words": [
+      "tender coconut water ml",
+      "tender coconut water 500ml",
+      "coconut water",
+      "hydration"
+    ]
+  },
+  {
+    "id": 8,
+    "sku": "COLA",
+    "name": "Cola Soft Drink 750ml",
+    "price": 45.0,
+    "old_price": 0,
+    "image": "/images/products/snacks/soft-drink.webp",
+    "category": "Beverages",
+    "section": "beverages",
+    "search_words": [
+      "cola soft drink ml",
+      "cola soft drink 750ml",
+      "soft drink",
+      "cola",
+      "fizzy"
+    ]
+  },
+  {
+    "id": 9,
+    "sku": "NIMB",
+    "name": "Nimbu Soda 300ml",
+    "price": 30.0,
+    "old_price": 0,
+    "image": "/images/products/beverages/green-lemon-juice.webp",
+    "category": "Beverages",
+    "section": "beverages",
+    "search_words": [
+      "nimbu soda ml",
+      "nimbu soda 300ml",
+      "soft drink",
+      "lemon soda"
+    ]
+  },
+  {
+    "id": 10,
+    "sku": "WTR1L",
+    "name": "Mineral Water 1L",
+    "price": 20.0,
+    "old_price": 0,
+    "image": "/images/products/essentials/water.webp",
+    "category": "Beverages",
+    "section": "beverages",
+    "search_words": [
+      "mineral water l",
+      "mineral water 1l",
+      "water",
+      "hydration"
+    ]
+  },
+  {
+    "id": 11,
+    "sku": "HNY500",
+    "name": "Organic Honey 500g",
+    "price": 450.0,
+    "old_price": 0,
+    "image": "/images/products/offers/maple-syrup.webp",
+    "category": "Pantry",
+    "section": "essentials",
+    "search_words": [
+      "organic honey g",
+      "organic honey 500g",
+      "honey",
+      "natural sweetener",
+      "organic"
+    ]
+  },
+  {
+    "id": 12,
+    "sku": "SF100",
+    "name": "Sugar-Free Sweetener",
+    "price": 180.0,
+    "old_price": 0,
+    "image": "/images/products/essentials/sugar2.webp",
+    "category": "Pantry",
+    "section": "essentials",
+    "search_words": [
+      "sugar free sweetener",
+      "sugar-free sweetener",
+      "sugar-free",
+      "sweetener",
+      "diabetic",
+      "diet"
+    ]
+  },
+  {
+    "id": 13,
+    "sku": "RICE5",
+    "name": "Basmati Rice 5kg",
+    "price": 650.0,
+    "old_price": 0,
+    "image": "/images/products/essentials/rice.webp",
+    "category": "Pantry",
+    "section": "essentials",
+    "search_words": [
+      "basmati rice kg",
+      "basmati rice 5kg",
+      "rice",
+      "basmati",
+      "staple"
+    ]
+  },
+  {
+    "id": 14,
+    "sku": "ATTA5",
+    "name": "Whole Wheat Atta 5kg",
+    "price": 280.0,
+    "old_price": 0,
+    "image": "/images/products/essentials/flour2.webp",
+    "category": "Pantry",
+    "section": "essentials",
+    "search_words": [
+      "whole wheat atta kg",
+      "whole wheat atta 5kg",
+      "atta",
+      "flour",
+      "staple"
+    ]
+  },
+  {
+    "id": 15,
+    "sku": "SUG1",
+    "name": "Sugar 1kg",
+    "price": 50.0,
+    "old_price": 0,
+    "image": "/images/products/essentials/sugar2.webp",
+    "category": "Pantry",
+    "section": "essentials",
+    "search_words": [
+      "sugar kg",
+      "sugar 1kg",
+      "sugar",
+      "sweet",
+      "staple"
+    ]
+  },
+  {
+    "id": 16,
+    "sku": "SALT1",
+    "name": "Iodised Salt 1kg",
+    "price": 28.0,
+    "old_price": 0,
+    "image": "/images/products/essentials/salt2.webp",
+    "category": "Pantry",
+    "section": "essentials",
+    "search_words": [
+      "iodised salt kg",
+      "iodised salt 1kg",
+      "salt",
+      "staple"
+    ]
+  },
+  {
+    "id": 17,
+    "sku": "OIL1",
+    "name": "Sunflower Oil 1L",
+    "price": 160.0,
+    "old_price": 0,
+    "image": "/images/products/essentials/oil.webp",
+    "category": "Pantry",
+    "section": "essentials",
+    "search_words": [
+      "sunflower oil l",
+      "sunflower oil 1l",
+      "oil",
+      "cooking"
+    ]
+  },
+  {
+    "id": 18,
+    "sku": "OLV500",
+    "name": "Extra Virgin Olive Oil 500ml",
+    "price": 599.0,
+    "old_price": 0,
+    "image": "/images/products/essentials/olive-oil.webp",
+    "category": "Pantry",
+    "section": "essentials",
+    "search_words": [
+      "extra virgin olive oil ml",
+      "extra virgin olive oil 500ml",
+      "olive oil",
+      "oil",
+      "italian"
+    ]
+  },
+  {
+    "id": 19,
+    "sku": "PASTA",
+    "name": "Penne Pasta 500g",
+    "price": 110.0,
+    "old_price": 0,
+    "image": "/images/products/offers/macaroni.webp",
+    "category": "Pantry",
+    "section": "essentials",
+    "search_words": [
+      "penne pasta g",
+      "penne pasta 500g",
+      "pasta",
+      "penne",
+      "italian"
+    ]
+  },
+  {
+    "id": 20,
+    "sku": "PSAUCE",
+    "name": "Pasta Sauce 400g",
+    "price": 150.0,
+    "old_price": 0,
+    "image": "/images/products/canneds/tomato-sauce.webp",
+    "category": "Pantry",
+    "section": "essentials",
+    "search_words": [
+      "pasta sauce g",
+      "pasta sauce 400g",
+      "pasta sauce",
+      "sauce",
+      "tomato",
+      "italian"
+    ]
+  },
+  {
+    "id": 21,
+    "sku": "DAL1",
+    "name": "Toor Dal 1kg",
+    "price": 170.0,
+    "old_price": 0,
+    "image": "/images/products/essentials/bean.webp",
+    "category": "Pantry",
+    "section": "essentials",
+    "search_words": [
+      "toor dal kg",
+      "toor dal 1kg",
+      "dal",
+      "lentils",
+      "staple"
+    ]
+  },
+  {
+    "id": 22,
+    "sku": "TURM",
+    "name": "Turmeric Powder 200g",
+    "price": 60.0,
+    "old_price": 0,
+    "image": "/images/products/seasoning/turmeric.webp",
+    "category": "Pantry",
+    "section": "essentials",
+    "search_words": [
+      "turmeric powder g",
+      "turmeric powder 200g",
+      "turmeric",
+      "spice",
+      "masala"
+    ]
+  },
+  {
+    "id": 23,
+    "sku": "JAM",
+    "name": "Mixed Fruit Jam 500g",
+    "price": 165.0,
+    "old_price": 0,
+    "image": "/images/products/full-fridge/salsa.webp",
+    "category": "Pantry",
+    "section": "essentials",
+    "search_words": [
+      "mixed fruit jam g",
+      "mixed fruit jam 500g",
+      "jam",
+      "spread",
+      "sweet"
+    ]
+  },
+  {
+    "id": 24,
+    "sku": "PICKLE",
+    "name": "Mango Pickle 400g",
+    "price": 130.0,
+    "old_price": 0,
+    "image": "/images/products/canneds/peach.webp",
+    "category": "Pantry",
+    "section": "essentials",
+    "search_words": [
+      "mango pickle g",
+      "mango pickle 400g",
+      "pickle",
+      "achar",
+      "spicy"
+    ]
+  },
+  {
+    "id": 25,
+    "sku": "RAJMA",
+    "name": "Canned Rajma 400g",
+    "price": 95.0,
+    "old_price": 0,
+    "image": "/images/products/canneds/beans.webp",
+    "category": "Pantry",
+    "section": "essentials",
+    "search_words": [
+      "canned rajma g",
+      "canned rajma 400g",
+      "rajma",
+      "beans",
+      "canned"
+    ]
+  },
+  {
+    "id": 26,
+    "sku": "MLK1L",
+    "name": "Toned Milk 1L",
+    "price": 60.0,
+    "old_price": 0,
+    "image": "/images/products/full-fridge/milk.webp",
+    "category": "Dairy",
+    "section": "cheeses-and-dairy",
+    "search_words": [
+      "toned milk l",
+      "toned milk 1l",
+      "milk",
+      "dairy",
+      "fresh"
+    ]
+  },
+  {
+    "id": 27,
+    "sku": "BTR100",
+    "name": "Salted Butter 100g",
+    "price": 58.0,
+    "old_price": 0,
+    "image": "/images/products/cheeses-and-dairy/cream-cheese.webp",
+    "category": "Dairy",
+    "section": "cheeses-and-dairy",
+    "search_words": [
+      "salted butter g",
+      "salted butter 100g",
+      "butter",
+      "dairy",
+      "spread"
+    ]
+  },
+  {
+    "id": 28,
+    "sku": "PNR200",
+    "name": "Fresh Paneer 200g",
+    "price": 95.0,
+    "old_price": 0,
+    "image": "/images/products/cheeses-and-dairy/mozzarella.webp",
+    "category": "Dairy",
+    "section": "cheeses-and-dairy",
+    "search_words": [
+      "fresh paneer g",
+      "fresh paneer 200g",
+      "paneer",
+      "dairy",
+      "protein"
+    ]
+  },
+  {
+    "id": 29,
+    "sku": "CURD400",
+    "name": "Curd 400g",
+    "price": 40.0,
+    "old_price": 0,
+    "image": "/images/products/frozen/yogurt.webp",
+    "category": "Dairy",
+    "section": "cheeses-and-dairy",
+    "search_words": [
+      "curd g",
+      "curd 400g",
+      "curd",
+      "dahi",
+      "dairy"
+    ]
+  },
+  {
+    "id": 30,
+    "sku": "CHS",
+    "name": "Cheese Slices 200g",
+    "price": 135.0,
+    "old_price": 0,
+    "image": "/images/products/cheeses-and-dairy/cheese-slice.webp",
+    "category": "Dairy",
+    "section": "cheeses-and-dairy",
+    "search_words": [
+      "cheese slices g",
+      "cheese slices 200g",
+      "cheese",
+      "dairy",
+      "sandwich"
+    ]
+  },
+  {
+    "id": 31,
+    "sku": "GHEE500",
+    "name": "Cow Ghee 500ml",
+    "price": 340.0,
+    "old_price": 0,
+    "image": "/images/products/cheeses-and-dairy/gouda.webp",
+    "category": "Dairy",
+    "section": "cheeses-and-dairy",
+    "search_words": [
+      "cow ghee ml",
+      "cow ghee 500ml",
+      "ghee",
+      "dairy",
+      "cooking"
+    ]
+  },
+  {
+    "id": 32,
+    "sku": "LASSI",
+    "name": "Mango Lassi 200ml",
+    "price": 35.0,
+    "old_price": 0,
+    "image": "/images/products/frozen/peach-yogurt.webp",
+    "category": "Dairy",
+    "section": "cheeses-and-dairy",
+    "search_words": [
+      "mango lassi ml",
+      "mango lassi 200ml",
+      "lassi",
+      "dairy",
+      "drink",
+      "mango"
+    ]
+  },
+  {
+    "id": 33,
+    "sku": "LEM6",
+    "name": "Lemons (6 pcs)",
+    "price": 60.0,
+    "old_price": 0,
+    "image": "/images/products/fruits/lemons.webp",
+    "category": "Produce",
+    "section": "fruits",
+    "search_words": [
+      "lemons ( pcs)",
+      "lemons (6 pcs)",
+      "lemon",
+      "citrus",
+      "fresh"
+    ]
+  },
+  {
+    "id": 34,
+    "sku": "APL1",
+    "name": "Shimla Apples 1kg",
+    "price": 180.0,
+    "old_price": 0,
+    "image": "/images/products/fruits/apples.webp",
+    "category": "Produce",
+    "section": "fruits",
+    "search_words": [
+      "shimla apples kg",
+      "shimla apples 1kg",
+      "apple",
+      "fruit",
+      "fresh"
+    ]
+  },
+  {
+    "id": 35,
+    "sku": "AVO2",
+    "name": "Avocados (2 pcs)",
+    "price": 199.0,
+    "old_price": 0,
+    "image": "/images/products/fruits/avocados.webp",
+    "category": "Produce",
+    "section": "fruits",
+    "search_words": [
+      "avocados ( pcs)",
+      "avocados (2 pcs)",
+      "avocado",
+      "fruit",
+      "fresh"
+    ]
+  },
+  {
+    "id": 36,
+    "sku": "PINE",
+    "name": "Pineapple (1 pc)",
+    "price": 90.0,
+    "old_price": 0,
+    "image": "/images/products/fruits/pineapple.webp",
+    "category": "Produce",
+    "section": "fruits",
+    "search_words": [
+      "pineapple ( pc)",
+      "pineapple (1 pc)",
+      "pineapple",
+      "fruit",
+      "fresh"
+    ]
+  },
+  {
+    "id": 37,
+    "sku": "STRW",
+    "name": "Strawberries 200g",
+    "price": 120.0,
+    "old_price": 0,
+    "image": "/images/products/fruits/strawberry.webp",
+    "category": "Produce",
+    "section": "fruits",
+    "search_words": [
+      "strawberries g",
+      "strawberries 200g",
+      "strawberry",
+      "fruit",
+      "fresh"
+    ]
+  },
+  {
+    "id": 38,
+    "sku": "WMEL",
+    "name": "Watermelon (1 pc)",
+    "price": 80.0,
+    "old_price": 0,
+    "image": "/images/products/fruits/watermelon.webp",
+    "category": "Produce",
+    "section": "fruits",
+    "search_words": [
+      "watermelon ( pc)",
+      "watermelon (1 pc)",
+      "watermelon",
+      "fruit",
+      "fresh"
+    ]
+  },
+  {
+    "id": 39,
+    "sku": "BPEP",
+    "name": "Bell Peppers 500g",
+    "price": 75.0,
+    "old_price": 0,
+    "image": "/images/products/rotisserie/bell-pepper.webp",
+    "category": "Produce",
+    "section": "fruits",
+    "search_words": [
+      "bell peppers g",
+      "bell peppers 500g",
+      "bell pepper",
+      "capsicum",
+      "vegetable"
+    ]
+  },
+  {
+    "id": 40,
+    "sku": "OATC",
+    "name": "Oats Cookies Pack",
+    "price": 99.0,
+    "old_price": 0,
+    "image": "/images/products/snacks/cookie.webp",
+    "category": "Snacks",
+    "section": "snacks",
+    "search_words": [
+      "oats cookies pack",
+      "cookies",
+      "biscuits",
+      "oats"
+    ]
+  },
+  {
+    "id": 41,
+    "sku": "CHIPS",
+    "name": "Masala Potato Chips 150g",
+    "price": 50.0,
+    "old_price": 0,
+    "image": "/images/products/snacks/chips.webp",
+    "category": "Snacks",
+    "section": "snacks",
+    "search_words": [
+      "masala potato chips g",
+      "masala potato chips 150g",
+      "chips",
+      "snacks",
+      "salty"
+    ]
+  },
+  {
+    "id": 42,
+    "sku": "POPC",
+    "name": "Butter Popcorn 100g",
+    "price": 60.0,
+    "old_price": 0,
+    "image": "/images/products/snacks/popcorn.webp",
+    "category": "Snacks",
+    "section": "snacks",
+    "search_words": [
+      "butter popcorn g",
+      "butter popcorn 100g",
+      "popcorn",
+      "snacks"
+    ]
+  },
+  {
+    "id": 43,
+    "sku": "CHOC",
+    "name": "Dark Chocolate Bar 80g",
+    "price": 110.0,
+    "old_price": 0,
+    "image": "/images/products/snacks/chocolate-bar.webp",
+    "category": "Snacks",
+    "section": "snacks",
+    "search_words": [
+      "dark chocolate bar g",
+      "dark chocolate bar 80g",
+      "chocolate",
+      "sweet",
+      "snacks"
+    ]
+  },
+  {
+    "id": 44,
+    "sku": "MARIE",
+    "name": "Marie Biscuits 250g",
+    "price": 35.0,
+    "old_price": 0,
+    "image": "/images/products/sweets/cookie.webp",
+    "category": "Snacks",
+    "section": "snacks",
+    "search_words": [
+      "marie biscuits g",
+      "marie biscuits 250g",
+      "biscuits",
+      "tea-time",
+      "snacks"
+    ]
+  },
+  {
+    "id": 45,
+    "sku": "NAMK",
+    "name": "Namkeen Mixture 400g",
+    "price": 120.0,
+    "old_price": 0,
+    "image": "/images/products/frozen/french-fries.webp",
+    "category": "Snacks",
+    "section": "snacks",
+    "search_words": [
+      "namkeen mixture g",
+      "namkeen mixture 400g",
+      "namkeen",
+      "snacks",
+      "salty"
+    ]
+  },
+  {
+    "id": 46,
+    "sku": "SANDW",
+    "name": "Veg Sandwich",
+    "price": 70.0,
+    "old_price": 0,
+    "image": "/images/products/snacks/sandwich.webp",
+    "category": "Snacks",
+    "section": "snacks",
+    "search_words": [
+      "veg sandwich",
+      "sandwich",
+      "snacks",
+      "ready to eat"
+    ]
+  },
+  {
+    "id": 47,
+    "sku": "BREAD",
+    "name": "Whole Wheat Bread 400g",
+    "price": 45.0,
+    "old_price": 0,
+    "image": "/images/products/full-fridge/garlic-bread.webp",
+    "category": "Bakery",
+    "section": "bakery",
+    "search_words": [
+      "whole wheat bread g",
+      "whole wheat bread 400g",
+      "bread",
+      "bakery",
+      "breakfast"
+    ]
+  },
+  {
+    "id": 48,
+    "sku": "GBRD",
+    "name": "Garlic Bread",
+    "price": 90.0,
+    "old_price": 0,
+    "image": "/images/products/full-fridge/garlic-bread.webp",
+    "category": "Bakery",
+    "section": "bakery",
+    "search_words": [
+      "garlic bread",
+      "bakery"
+    ]
+  },
+  {
+    "id": 49,
+    "sku": "CINN",
+    "name": "Cinnamon Rolls (4 pcs)",
+    "price": 160.0,
+    "old_price": 0,
+    "image": "/images/products/full-fridge/cinnamon-roll.webp",
+    "category": "Bakery",
+    "section": "bakery",
+    "search_words": [
+      "cinnamon rolls ( pcs)",
+      "cinnamon rolls (4 pcs)",
+      "cinnamon roll",
+      "bakery",
+      "sweet"
+    ]
+  },
+  {
+    "id": 50,
+    "sku": "DONUT",
+    "name": "Chocolate Donuts (4 pcs)",
+    "price": 140.0,
+    "old_price": 0,
+    "image": "/images/products/sweets/donut.webp",
+    "category": "Bakery",
+    "section": "bakery",
+    "search_words": [
+      "chocolate donuts ( pcs)",
+      "chocolate donuts (4 pcs)",
+      "donut",
+      "bakery",
+      "sweet"
+    ]
+  },
+  {
+    "id": 51,
+    "sku": "PAV",
+    "name": "Pav Buns (6 pcs)",
+    "price": 35.0,
+    "old_price": 0,
+    "image": "/images/products/full-fridge/garlic-bread.webp",
+    "category": "Bakery",
+    "section": "bakery",
+    "search_words": [
+      "pav buns ( pcs)",
+      "pav buns (6 pcs)",
+      "pav",
+      "buns",
+      "bakery"
+    ]
+  },
+  {
+    "id": 52,
+    "sku": "RUSK",
+    "name": "Elaichi Cake Rusk 300g",
+    "price": 85.0,
+    "old_price": 0,
+    "image": "/images/products/sweets/cookie.webp",
+    "category": "Bakery",
+    "section": "bakery",
+    "search_words": [
+      "elaichi cake rusk g",
+      "elaichi cake rusk 300g",
+      "rusk",
+      "biscuits",
+      "bakery",
+      "tea-time"
+    ]
+  },
+  {
+    "id": 53,
+    "sku": "OATS1",
+    "name": "Rolled Oats 1kg",
+    "price": 190.0,
+    "old_price": 0,
+    "image": "/images/products/dietary/protein.webp",
+    "category": "Breakfast",
+    "section": "full-fridge",
+    "search_words": [
+      "rolled oats kg",
+      "rolled oats 1kg",
+      "oats",
+      "cereal",
+      "breakfast",
+      "healthy"
+    ]
+  },
+  {
+    "id": 54,
+    "sku": "CFLK",
+    "name": "Corn Flakes 500g",
+    "price": 175.0,
+    "old_price": 0,
+    "image": "/images/products/dietary/vitamin-b.webp",
+    "category": "Breakfast",
+    "section": "full-fridge",
+    "search_words": [
+      "corn flakes g",
+      "corn flakes 500g",
+      "cereal",
+      "corn flakes",
+      "breakfast"
+    ]
+  },
+  {
+    "id": 55,
+    "sku": "MUESLI",
+    "name": "Fruit & Nut Muesli 750g",
+    "price": 399.0,
+    "old_price": 0,
+    "image": "/images/products/dietary/vitamin-d.webp",
+    "category": "Breakfast",
+    "section": "full-fridge",
+    "search_words": [
+      "fruit and nut muesli g",
+      "fruit & nut muesli 750g",
+      "muesli",
+      "cereal",
+      "breakfast"
+    ]
+  },
+  {
+    "id": 56,
+    "sku": "EGGS12",
+    "name": "Farm Eggs (12 pcs)",
+    "price": 96.0,
+    "old_price": 0,
+    "image": "/images/products/eggs/eggs.webp",
+    "category": "Breakfast",
+    "section": "full-fridge",
+    "search_words": [
+      "farm eggs ( pcs)",
+      "farm eggs (12 pcs)",
+      "eggs",
+      "protein",
+      "breakfast"
+    ]
+  },
+  {
+    "id": 57,
+    "sku": "MSYR",
+    "name": "Maple Syrup 250ml",
+    "price": 520.0,
+    "old_price": 0,
+    "image": "/images/products/offers/maple-syrup.webp",
+    "category": "Breakfast",
+    "section": "full-fridge",
+    "search_words": [
+      "maple syrup ml",
+      "maple syrup 250ml",
+      "maple syrup",
+      "syrup",
+      "sweet"
+    ]
+  },
+  {
+    "id": 58,
+    "sku": "PBTR",
+    "name": "Crunchy Peanut Butter 340g",
+    "price": 210.0,
+    "old_price": 0,
+    "image": "/images/products/cheeses-and-dairy/cream-cheese.webp",
+    "category": "Breakfast",
+    "section": "full-fridge",
+    "search_words": [
+      "crunchy peanut butter g",
+      "crunchy peanut butter 340g",
+      "peanut butter",
+      "spread",
+      "protein"
+    ]
+  },
+  {
+    "id": 59,
+    "sku": "POHA",
+    "name": "Thick Poha 500g",
+    "price": 55.0,
+    "old_price": 0,
+    "image": "/images/products/essentials/rice.webp",
+    "category": "Breakfast",
+    "section": "full-fridge",
+    "search_words": [
+      "thick poha g",
+      "thick poha 500g",
+      "poha",
+      "breakfast",
+      "staple"
+    ]
+  },
+  {
+    "id": 60,
+    "sku": "SOAP",
+    "name": "Neem Bath Soap (3 pack)",
+    "price": 105.0,
+    "old_price": 0,
+    "image": "/images/products/cleaning/soap.webp",
+    "category": "Personal Care",
+    "section": "cleaning",
+    "search_words": [
+      "neem bath soap ( pack)",
+      "neem bath soap (3 pack)",
+      "soap",
+      "bath",
+      "neem"
+    ]
+  },
+  {
+    "id": 61,
+    "sku": "HWASH",
+    "name": "Antiseptic Handwash 250ml",
+    "price": 99.0,
+    "old_price": 0,
+    "image": "/images/products/cleaning/antiseptic.webp",
+    "category": "Personal Care",
+    "section": "cleaning",
+    "search_words": [
+      "antiseptic handwash ml",
+      "antiseptic handwash 250ml",
+      "handwash",
+      "antiseptic",
+      "hygiene"
+    ]
+  },
+  {
+    "id": 62,
+    "sku": "PTWL",
+    "name": "Paper Towels (2 rolls)",
+    "price": 120.0,
+    "old_price": 0,
+    "image": "/images/products/essentials/paper-towel.webp",
+    "category": "Personal Care",
+    "section": "cleaning",
+    "search_words": [
+      "paper towels ( rolls)",
+      "paper towels (2 rolls)",
+      "paper towels",
+      "tissue",
+      "hygiene"
+    ]
+  },
+  {
+    "id": 63,
+    "sku": "VITC",
+    "name": "Vitamin C Tablets (60)",
+    "price": 299.0,
+    "old_price": 0,
+    "image": "/images/products/dietary/vitamin-c.webp",
+    "category": "Personal Care",
+    "section": "cleaning",
+    "search_words": [
+      "vitamin c tablets ()",
+      "vitamin c tablets (60)",
+      "vitamin c",
+      "supplement",
+      "immunity"
+    ]
+  },
+  {
+    "id": 64,
+    "sku": "TPICK",
+    "name": "Bamboo Toothpicks (200)",
+    "price": 40.0,
+    "old_price": 0,
+    "image": "/images/products/essentials/toothpick.webp",
+    "category": "Personal Care",
+    "section": "cleaning",
+    "search_words": [
+      "bamboo toothpicks ()",
+      "bamboo toothpicks (200)",
+      "toothpicks",
+      "hygiene"
+    ]
+  },
+  {
+    "id": 65,
+    "sku": "SPNG",
+    "name": "Bath Sponge",
+    "price": 65.0,
+    "old_price": 0,
+    "image": "/images/products/cleaning/sponge.webp",
+    "category": "Personal Care",
+    "section": "cleaning",
+    "search_words": [
+      "bath sponge",
+      "sponge",
+      "bath"
+    ]
+  }
+]
