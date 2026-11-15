@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+pandas
+pydantic
+sentence-transformers
+chromadb
+python-dotenv
+pyjwt
+anthropic
+openai
+pytest
+httpx

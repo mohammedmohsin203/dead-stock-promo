@@ -1,0 +1,2 @@
+min_margin_pct,max_discount_pct,dead_stock_days,near_expiry_days,promo_valid_hours,max_uses_per_code,max_discounted_units,expiry_discount_days,expiry_discount_pct,discount_tiers
+10,30,21,10,48,50,2,3,30,21:10|30:20|40:25

@@ -1,0 +1,66 @@
+sku,name,category,description,tags,pairs_with,avoid_with,image
+GT100,Green Tea 100g,Beverages,Light whole-leaf green tea from the Nilgiris.,green tea|tea|healthy|antioxidant,honey|lemon|biscuits,,/images/products/beverages/mint-tea.webp
+TULSI,Tulsi Green Tea 100g,Beverages,Green tea blended with holy basil.,green tea|tea|tulsi|herbal,honey|lemon,,/images/products/dietary/detox.webp
+MNG1L,Mango Juice 1L,Beverages,Alphonso mango fruit drink.,juice|mango|fruit drink,snacks|chips,,/images/products/beverages/mango-juice.webp
+BT250,Assam Black Tea 250g,Beverages,Strong CTC black tea for daily chai.,black tea|tea|chai,biscuits|milk|sugar,,/images/products/beverages/black-teas.webp
+COF200,Filter Coffee 200g,Beverages,South Indian filter coffee with chicory.,coffee|filter coffee,milk|sugar|biscuits,,/images/products/essentials/coffee-beans.webp
+OJ1L,Orange Juice 1L,Beverages,No-added-sugar orange juice.,juice|orange|breakfast,bread|eggs,,/images/products/beverages/orange-juice.webp
+CW500,Tender Coconut Water 500ml,Beverages,Natural tender coconut water.,coconut water|hydration,fruit,,/images/products/beverages/coconut-water.webp
+COLA,Cola Soft Drink 750ml,Beverages,Chilled fizzy cola.,soft drink|cola|fizzy,chips|popcorn|snacks,,/images/products/snacks/soft-drink.webp
+NIMB,Nimbu Soda 300ml,Beverages,Sparkling lemon soda.,soft drink|lemon soda,chips|namkeen,,/images/products/beverages/green-lemon-juice.webp
+WTR1L,Mineral Water 1L,Beverages,Packaged drinking water.,water|hydration,lemon,,/images/products/essentials/water.webp
+HNY500,Organic Honey 500g,Pantry,Raw organic forest honey.,honey|natural sweetener|organic,green tea|oats|bread|lemon,sugar-free|diabetic,/images/products/offers/maple-syrup.webp
+SF100,Sugar-Free Sweetener,Pantry,Zero-calorie sweetener tablets for diabetic diets.,sugar-free|sweetener|diabetic|diet,green tea|coffee,,/images/products/essentials/sugar2.webp
+RICE5,Basmati Rice 5kg,Pantry,Aged long-grain basmati rice.,rice|basmati|staple,dal|ghee,,/images/products/essentials/rice.webp
+ATTA5,Whole Wheat Atta 5kg,Pantry,Stone-ground chakki atta.,atta|flour|staple,ghee|dal,,/images/products/essentials/flour2.webp
+SUG1,Sugar 1kg,Pantry,Refined white sugar.,sugar|sweet|staple,tea|coffee,,/images/products/essentials/sugar2.webp
+SALT1,Iodised Salt 1kg,Pantry,Free-flow iodised salt.,salt|staple,,,/images/products/essentials/salt2.webp
+OIL1,Sunflower Oil 1L,Pantry,Refined sunflower cooking oil.,oil|cooking,atta|rice,,/images/products/essentials/oil.webp
+OLV500,Extra Virgin Olive Oil 500ml,Pantry,Cold-pressed olive oil.,olive oil|oil|italian,pasta|bread|salad,,/images/products/essentials/olive-oil.webp
+PASTA,Penne Pasta 500g,Pantry,Durum wheat penne.,pasta|penne|italian,pasta sauce|cheese|olive oil,,/images/products/offers/macaroni.webp
+PSAUCE,Pasta Sauce 400g,Pantry,Tomato basil pasta sauce.,pasta sauce|sauce|tomato|italian,pasta|cheese,,/images/products/canneds/tomato-sauce.webp
+DAL1,Toor Dal 1kg,Pantry,Unpolished toor dal.,dal|lentils|staple,rice|ghee,,/images/products/essentials/bean.webp
+TURM,Turmeric Powder 200g,Pantry,Ground haldi.,turmeric|spice|masala,dal|milk,,/images/products/seasoning/turmeric.webp
+JAM,Mixed Fruit Jam 500g,Pantry,Classic mixed fruit jam.,jam|spread|sweet,bread|butter,sugar-free|diabetic,/images/products/full-fridge/salsa.webp
+PICKLE,Mango Pickle 400g,Pantry,Spicy Andhra-style mango pickle.,pickle|achar|spicy,rice|dal|curd,,/images/products/canneds/peach.webp
+RAJMA,Canned Rajma 400g,Pantry,Ready-to-cook red kidney beans.,rajma|beans|canned,rice,,/images/products/canneds/beans.webp
+MLK1L,Toned Milk 1L,Dairy,Fresh pasteurised toned milk.,milk|dairy|fresh,cereal|oats|tea,,/images/products/full-fridge/milk.webp
+BTR100,Salted Butter 100g,Dairy,Creamy table butter.,butter|dairy|spread,bread|pav,,/images/products/cheeses-and-dairy/cream-cheese.webp
+PNR200,Fresh Paneer 200g,Dairy,Soft malai paneer.,paneer|dairy|protein,bell pepper|atta,,/images/products/cheeses-and-dairy/mozzarella.webp
+CURD400,Curd 400g,Dairy,Thick set dahi.,curd|dahi|dairy,rice|pickle,,/images/products/frozen/yogurt.webp
+CHS,Cheese Slices 200g,Dairy,Processed cheese slices.,cheese|dairy|sandwich,bread|pasta,,/images/products/cheeses-and-dairy/cheese-slice.webp
+GHEE500,Cow Ghee 500ml,Dairy,Pure cow ghee.,ghee|dairy|cooking,rice|dal|atta,,/images/products/cheeses-and-dairy/gouda.webp
+LASSI,Mango Lassi 200ml,Dairy,Chilled mango lassi.,lassi|dairy|drink|mango,snacks|namkeen,,/images/products/frozen/peach-yogurt.webp
+LEM6,Lemons (6 pcs),Produce,Juicy fresh lemons.,lemon|citrus|fresh,green tea|water,,/images/products/fruits/lemons.webp
+APL1,Shimla Apples 1kg,Produce,Crisp red apples.,apple|fruit|fresh,oats|muesli,,/images/products/fruits/apples.webp
+AVO2,Avocados (2 pcs),Produce,Ripe Hass avocados.,avocado|fruit|fresh,bread|lemon,,/images/products/fruits/avocados.webp
+PINE,Pineapple (1 pc),Produce,Sweet whole pineapple.,pineapple|fruit|fresh,curd,,/images/products/fruits/pineapple.webp
+STRW,Strawberries 200g,Produce,Mahabaleshwar strawberries.,strawberry|fruit|fresh,muesli|oats|curd,,/images/products/fruits/strawberry.webp
+WMEL,Watermelon (1 pc),Produce,Seedless watermelon.,watermelon|fruit|fresh,,,/images/products/fruits/watermelon.webp
+BPEP,Bell Peppers 500g,Produce,Mixed capsicum.,bell pepper|capsicum|vegetable,paneer|pasta,,/images/products/rotisserie/bell-pepper.webp
+OATC,Oats Cookies Pack,Snacks,Crunchy oats and jaggery cookies.,cookies|biscuits|oats,tea|coffee|milk,,/images/products/snacks/cookie.webp
+CHIPS,Masala Potato Chips 150g,Snacks,Spicy masala potato chips.,chips|snacks|salty,soft drink|cola|juice,,/images/products/snacks/chips.webp
+POPC,Butter Popcorn 100g,Snacks,Ready-to-eat butter popcorn.,popcorn|snacks,soft drink|cola,,/images/products/snacks/popcorn.webp
+CHOC,Dark Chocolate Bar 80g,Snacks,55% cocoa dark chocolate.,chocolate|sweet|snacks,coffee|milk,,/images/products/snacks/chocolate-bar.webp
+MARIE,Marie Biscuits 250g,Snacks,Light tea-time biscuits.,biscuits|tea-time|snacks,tea|coffee,,/images/products/sweets/cookie.webp
+NAMK,Namkeen Mixture 400g,Snacks,Spicy sev and peanut mixture.,namkeen|snacks|salty,tea|soft drink|lassi,,/images/products/frozen/french-fries.webp
+SANDW,Veg Sandwich,Snacks,Fresh grilled veg sandwich.,sandwich|snacks|ready to eat,juice|coffee,,/images/products/snacks/sandwich.webp
+BREAD,Whole Wheat Bread 400g,Bakery,Soft whole wheat sandwich bread.,bread|bakery|breakfast,butter|jam|eggs|honey,,/images/products/full-fridge/garlic-bread.webp
+GBRD,Garlic Bread,Bakery,Buttery garlic bread loaf.,garlic bread|bakery,pasta|cheese,,/images/products/full-fridge/garlic-bread.webp
+CINN,Cinnamon Rolls (4 pcs),Bakery,Soft glazed cinnamon rolls.,cinnamon roll|bakery|sweet,coffee|milk,,/images/products/full-fridge/cinnamon-roll.webp
+DONUT,Chocolate Donuts (4 pcs),Bakery,Chocolate glazed donuts.,donut|bakery|sweet,coffee|milk,,/images/products/sweets/donut.webp
+PAV,Pav Buns (6 pcs),Bakery,Soft ladi pav.,pav|buns|bakery,butter,,/images/products/full-fridge/garlic-bread.webp
+RUSK,Elaichi Cake Rusk 300g,Bakery,Crisp cardamom cake rusk.,rusk|biscuits|bakery|tea-time,tea|coffee|chai,,/images/products/sweets/cookie.webp
+OATS1,Rolled Oats 1kg,Breakfast,Wholegrain rolled oats.,oats|cereal|breakfast|healthy,milk|honey|fruit,,/images/products/dietary/protein.webp
+CFLK,Corn Flakes 500g,Breakfast,Crunchy corn flakes.,cereal|corn flakes|breakfast,milk|honey,,/images/products/dietary/vitamin-b.webp
+MUESLI,Fruit & Nut Muesli 750g,Breakfast,Muesli with almonds and raisins.,muesli|cereal|breakfast,milk|curd|oats,,/images/products/dietary/vitamin-d.webp
+EGGS12,Farm Eggs (12 pcs),Breakfast,Fresh white eggs.,eggs|protein|breakfast,bread|butter,,/images/products/eggs/eggs.webp
+MSYR,Maple Syrup 250ml,Breakfast,Pure Canadian maple syrup.,maple syrup|syrup|sweet,oats|bread|cereal,sugar-free|diabetic,/images/products/offers/maple-syrup.webp
+PBTR,Crunchy Peanut Butter 340g,Breakfast,Roasted crunchy peanut butter.,peanut butter|spread|protein,bread|oats,,/images/products/cheeses-and-dairy/cream-cheese.webp
+POHA,Thick Poha 500g,Breakfast,Flattened rice for poha.,poha|breakfast|staple,lemon|namkeen,,/images/products/essentials/rice.webp
+SOAP,Neem Bath Soap (3 pack),Personal Care,Neem and tulsi bathing bar.,soap|bath|neem,handwash,,/images/products/cleaning/soap.webp
+HWASH,Antiseptic Handwash 250ml,Personal Care,Germ-protection liquid handwash.,handwash|antiseptic|hygiene,soap|paper towels,,/images/products/cleaning/antiseptic.webp
+PTWL,Paper Towels (2 rolls),Personal Care,Absorbent kitchen towels.,paper towels|tissue|hygiene,handwash,,/images/products/essentials/paper-towel.webp
+VITC,Vitamin C Tablets (60),Personal Care,Chewable vitamin C with zinc.,vitamin c|supplement|immunity,orange|juice|lemon,,/images/products/dietary/vitamin-c.webp
+TPICK,Bamboo Toothpicks (200),Personal Care,Eco-friendly bamboo toothpicks.,toothpicks|hygiene,,,/images/products/essentials/toothpick.webp
+SPNG,Bath Sponge,Personal Care,Soft exfoliating bath sponge.,sponge|bath,soap,,/images/products/cleaning/sponge.webp

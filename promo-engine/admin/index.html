@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Promo Engine admin</title>
+<style>
+  :root {
+    --bg: #f4f8f2; --panel: #ffffff; --ink: #143c27; --muted: #5f6f66; --line: #dfe9dc;
+    --brand: #00652e; --brand-2: #409a3c; --accent: #7ec200; --warn: #b45309; --bad: #b3261e; --soft: #e9f5e1;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+  header { background: var(--brand); color: #fff; padding: 14px 24px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  header h1 { font-size: 1.15rem; margin: 0; }
+  header .meta { font-size: .8rem; opacity: .85; margin-left: auto; }
+  .live { display: inline-flex; align-items: center; gap: 6px; font-size: .8rem; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
+  .dot.off { background: #f59e0b; }
+  nav { display: flex; gap: 4px; padding: 0 24px; background: #fff; border-bottom: 1px solid var(--line); overflow-x: auto; }
+  nav button { border: 0; background: none; padding: 12px 16px; font: inherit; font-weight: 600; color: var(--muted); cursor: pointer; border-bottom: 3px solid transparent; white-space: nowrap; }
+  nav button[aria-selected="true"] { color: var(--brand); border-bottom-color: var(--brand); }
+  main { padding: 24px; max-width: 1280px; margin: 0 auto; }
+  section[hidden] { display: none; }
+  h2 { font-size: 1rem; margin: 28px 0 10px; }
+  h2:first-child { margin-top: 0; }
+  .muted { color: var(--muted); font-size: .85rem; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+  .card .label { font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .card .value { font-size: 1.5rem; font-weight: 800; margin-top: 4px; }
+  .card .sub { font-size: .78rem; color: var(--muted); margin-top: 2px; }
+  .table-wrap { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: .87rem; }
+  th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  th { background: var(--soft); font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; position: sticky; top: 0; }
+  tr:last-child td { border-bottom: 0; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.flash td { animation: flash 2.5s ease-out; }
+  @keyframes flash { from { background: #d9f2b4; } to { background: transparent; } }
+  @media (prefers-reduced-motion: reduce) { tr.flash td { animation: none; } }
+  .pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: .72rem; font-weight: 700; }
+  .pill.dead { background: #fde8e6; color: var(--bad); }
+  .pill.ok { background: var(--soft); color: var(--brand); }
+  .pill.llm { background: #e7e9fb; color: #3730a3; }
+  .pill.backup { background: #eef1ee; color: var(--muted); }
+  .pill.low { background: #fef3c7; color: var(--warn); }
+  .bar { display: inline-block; height: 8px; border-radius: 4px; background: var(--accent); vertical-align: middle; margin-right: 6px; }
+  .toolbar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
+  input, select { font: inherit; padding: 7px 10px; border: 1px solid #c4d3c0; border-radius: 8px; background: #fff; color: var(--ink); }
+  input[type=number] { width: 90px; }
+  input:focus-visible, select:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  button.btn { border: 0; border-radius: 999px; background: var(--brand); color: #fff; font: inherit; font-weight: 700; padding: 8px 18px; cursor: pointer; }
+  button.btn:hover { background: var(--brand-2); }
+  button.btn:disabled { opacity: .55; cursor: wait; }
+  button.btn.ghost { background: none; color: var(--brand); border: 1px solid var(--brand); padding: 4px 12px; font-size: .8rem; }
+  button.link { border: 0; background: none; color: var(--bad); cursor: pointer; font: inherit; font-size: .8rem; text-decoration: underline; }
+  code { background: var(--soft); padding: 1px 6px; border-radius: 4px; font-size: .82rem; }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+  .panel h3 { margin: 0 0 8px; font-size: .95rem; }
+  .steps { margin: 0; padding-left: 18px; font-size: .87rem; line-height: 1.55; }
+  .form-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 7px 0; border-bottom: 1px dashed var(--line); }
+  .form-row label { font-size: .87rem; }
+  .form-row small { display: block; color: var(--muted); font-size: .75rem; }
+  .tier { display: flex; align-items: center; gap: 8px; padding: 5px 0; font-size: .87rem; }
+  #toast { position: fixed; right: 20px; bottom: 20px; background: var(--ink); color: #fff; padding: 12px 16px; border-radius: 12px; font-size: .87rem; max-width: 340px; box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+  #toast[hidden] { display: none; }
+  .status { font-size: .85rem; }
+  .status.err { color: var(--bad); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Dead-stock Promo Engine</h1>
+  <span class="live"><span class="dot" id="live-dot"></span><span id="live-text">Live</span></span>
+  <span class="meta" id="engine-meta"></span>
+</header>
+<nav role="tablist" aria-label="Admin sections">
+  <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
+  <button role="tab" data-tab="stock" aria-selected="false">Live stock</button>
+  <button role="tab" data-tab="offers" aria-selected="false">Offers &amp; logic</button>
+  <button role="tab" data-tab="orders" aria-selected="false">Orders</button>
+  <button role="tab" data-tab="settings" aria-selected="false">Discount settings</button>
+</nav>
+<main>
+  <section id="tab-overview">
+    <div class="cards" id="kpis"></div>
+    <div class="grid-2" style="margin-top:20px">
+      <div>
+        <h2>Latest orders</h2>
+        <div class="table-wrap"><table id="overview-orders"></table></div>
+      </div>
+      <div>
+        <h2>Most stuck products</h2>
+        <div class="table-wrap"><table id="overview-stuck"></table></div>
+      </div>
+    </div>
+    <h2>Code redemptions</h2>
+    <div class="table-wrap"><table id="usage"></table></div>
+  </section>
+
+  <section id="tab-stock" hidden>
+    <div class="toolbar">
+      <input id="stock-search" type="search" placeholder="Search name or SKU" aria-label="Search products">
+      <select id="stock-filter" aria-label="Filter products">
+        <option value="all">All products</option>
+        <option value="dead">Dead stock only</option>
+        <option value="low">Low stock (10 or fewer)</option>
+      </select>
+      <span class="muted" id="stock-count"></span>
+      <span class="muted">Refreshes every 3 seconds. Rows flash when stock changes.</span>
+    </div>
+    <div class="table-wrap"><table id="stock-table"></table></div>
+  </section>
+
+  <section id="tab-offers" hidden>
+    <div class="grid-2">
+      <div class="panel">
+        <h3>How an offer is chosen</h3>
+        <ol class="steps" id="logic-steps"></ol>
+      </div>
+      <div class="panel">
+        <h3>How the discount is set</h3>
+        <ol class="steps" id="pricing-steps"></ol>
+      </div>
+    </div>
+    <h2>Inspect a product</h2>
+    <div class="toolbar">
+      <label for="trigger-select" class="muted">When the cart contains</label>
+      <select id="trigger-select"></select>
+      <button class="btn" id="rebuild-btn" type="button">Rebuild offers</button>
+      <span class="status" id="rebuild-status"></span>
+    </div>
+    <div class="table-wrap"><table id="explain-table"></table></div>
+    <p class="muted">fit = 0.40 × pairs-with match + 0.35 × bought together + 0.25 × similarity. final = 0.50 × fit + 0.50 × stuck. The first row is what the shopper sees; the others are backups used when a cart guardrail blocks it.</p>
+    <h2>All offers</h2>
+    <div class="table-wrap"><table id="offers-table"></table></div>
+  </section>
+
+  <section id="tab-orders" hidden>
+    <div class="toolbar"><span class="muted" id="orders-count"></span><span class="muted">New orders appear here within 3 seconds.</span></div>
+    <div class="table-wrap"><table id="orders-table"></table></div>
+  </section>
+
+  <section id="tab-settings" hidden>
+    <form id="rules-form">
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Guardrails</h3>
+          <div id="rule-fields"></div>
+        </div>
+        <div class="panel">
+          <h3>Discount tiers</h3>
+          <p class="muted">A product gets the highest tier it has reached, then the cap and margin floor are applied.</p>
+          <div id="tiers"></div>
+          <button class="btn ghost" type="button" id="add-tier">Add tier</button>
+          <h3 style="margin-top:18px">Near-expiry discount</h3>
+          <div id="expiry-fields"></div>
+        </div>
+      </div>
+      <div class="toolbar" style="margin-top:16px">
+        <button class="btn" type="submit" id="save-rules">Save and re-price offers</button>
+        <span class="status" id="rules-status" role="status"></span>
+      </div>
+      <p class="muted">Saving writes <code>data\store_rules.csv</code> and rebuilds every offer. Running <code>generate_data.py</code> resets these to the defaults.</p>
+    </form>
+  </section>
+</main>
+<div id="toast" role="status" hidden></div>
+
+<script>
+(function () {
+  "use strict";
+  var POLL_MS = 3000;
+  var data = null, offers = [], lastStock = {}, seenOrders = null, rulesDirty = false, rulesLoaded = false;
+  var $ = function (id) { return document.getElementById(id); };
+  var inr = function (n) { return "₹" + Number(n).toLocaleString("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2 }); };
+
+  function h(tag, attrs) {
+    var node = document.createElement(tag);
+    Object.keys(attrs || {}).forEach(function (key) {
+      if (key === "class") node.className = attrs[key];
+      else if (key.slice(0, 2) === "on") node.addEventListener(key.slice(2), attrs[key]);
+      else node.setAttribute(key, attrs[key]);
+    });
+    for (var i = 2; i < arguments.length; i++) {
+      var child = arguments[i];
+      if (child === null || child === undefined) continue;
+      node.appendChild(typeof child === "object" ? child : document.createTextNode(String(child)));
+    }
+    return node;
+  }
+
+  function table(el, headers, rows, empty) {
+    el.textContent = "";
+    var head = h("tr", {});
+    headers.forEach(function (col) { head.appendChild(h("th", { class: col.num ? "num" : "" }, col.label)); });
+    el.appendChild(h("thead", {}, head));
+    var body = h("tbody", {});
+    if (!rows.length) body.appendChild(h("tr", {}, h("td", { colspan: headers.length, class: "muted" }, empty || "Nothing yet.")));
+    rows.forEach(function (row) {
+      var tr = h("tr", { class: row.flash ? "flash" : "" });
+      row.cells.forEach(function (cell, i) { tr.appendChild(h("td", { class: headers[i].num ? "num" : "" }, cell)); });
+      body.appendChild(tr);
+    });
+    el.appendChild(body);
+  }
+
+  function request(method, path, body) {
+    return fetch(path, {
+      method: method,
+      headers: body ? { "Content-Type": "application/json" } : {},
+      body: body ? JSON.stringify(body) : undefined,
+    }).then(function (res) {
+      return res.json().catch(function () { return {}; }).then(function (json) {
+        if (res.ok) return json;
+        var detail = json.detail;
+        if (Array.isArray(detail)) detail = detail.map(function (d) { return d.loc.slice(1).join(".") + ": " + d.msg; }).join("; ");
+        throw new Error(detail || "Request failed (" + res.status + ")");
+      });
+    });
+  }
+
+  function toast(text) {
+    var el = $("toast");
+    el.textContent = text;
+    el.hidden = false;
+    clearTimeout(toast.timer);
+    toast.timer = setTimeout(function () { el.hidden = true; }, 6000);
+  }
+
+  function when(iso) {
+    return new Date(iso).toLocaleString("en-IN", { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit", second: "2-digit" });
+  }
+
+  function itemsText(order) {
+    return order.items.map(function (i) { return i.qty + " × " + i.name; }).join(", ");
+  }
+
+  function stuckCell(value) {
+    return h("span", {}, h("span", { class: "bar", style: "width:" + Math.round(value * 70) + "px" }), value.toFixed(2));
+  }
+
+  function renderOverview() {
+    var k = data.kpis, e = data.engine;
+    var cards = [
+      ["Orders", k.orders, k.customers + " customer(s)"],
+      ["Revenue", inr(k.revenue), "after discounts"],
+      ["Discount given", inr(k.discount_given), k.promo_orders + " order(s) used a code"],
+      ["Dead-stock products", k.dead_products + " of " + k.products, k.dead_units + " units on the shelf"],
+      ["Cash tied up", inr(k.dead_value_at_cost), "dead stock at cost"],
+      ["Offers live", e.triggers, e.llm_written + " with LLM-written copy"],
+    ];
+    var box = $("kpis");
+    box.textContent = "";
+    cards.forEach(function (c) {
+      box.appendChild(h("div", { class: "card" }, h("div", { class: "label" }, c[0]), h("div", { class: "value" }, c[1]), h("div", { class: "sub" }, c[2])));
+    });
+
+    table($("overview-orders"), [{ label: "When" }, { label: "Customer" }, { label: "Items" }, { label: "Paid", num: true }],
+      data.orders.slice(0, 6).map(function (o) {
+        return { cells: [when(o.created_at), o.customer || "guest", itemsText(o), inr(o.paid_total)] };
+      }), "No orders yet. Complete a checkout in the store.");
+
+    var stuck = data.products.filter(function (p) { return p.is_dead; })
+      .sort(function (a, b) { return b.stuck - a.stuck; }).slice(0, 6);
+    table($("overview-stuck"), [{ label: "Product" }, { label: "Stock", num: true }, { label: "Unsold", num: true }, { label: "Stuck score" }],
+      stuck.map(function (p) { return { cells: [p.name, p.stock, p.days_unsold + " d", stuckCell(p.stuck)] }; }));
+
+    table($("usage"), [{ label: "Code" }, { label: "Product" }, { label: "Redeemed", num: true }, { label: "Limit", num: true }],
+      data.usage.map(function (u) { return { cells: [h("code", {}, u.code), u.target_name, u.used, u.limit] }; }),
+      "No codes redeemed yet.");
+  }
+
+  function renderStock() {
+    var query = $("stock-search").value.trim().toLowerCase();
+    var filter = $("stock-filter").value;
+    var rows = data.products.filter(function (p) {
+      if (query && (p.name + " " + p.sku).toLowerCase().indexOf(query) === -1) return false;
+      if (filter === "dead") return p.is_dead;
+      if (filter === "low") return p.stock <= 10;
+      return true;
+    });
+    $("stock-count").textContent = rows.length + " product(s)";
+    table($("stock-table"),
+      [{ label: "SKU" }, { label: "Product" }, { label: "Category" }, { label: "Price", num: true }, { label: "Cost", num: true },
+       { label: "Stock", num: true }, { label: "Unsold", num: true }, { label: "Expires in", num: true }, { label: "Stuck score" },
+       { label: "Status" }, { label: "Promo" }, { label: "" }],
+      rows.map(function (p) {
+        var changed = lastStock[p.sku] !== undefined && lastStock[p.sku] !== p.stock;
+        var status = p.is_dead ? h("span", { class: "pill dead" }, "Dead stock")
+          : p.stock <= 10 ? h("span", { class: "pill low" }, "Low stock") : h("span", { class: "pill ok" }, "Moving");
+        var promo = p.code ? h("span", {}, p.discount_pct + "% → " + inr(p.new_price)) : h("span", { class: "muted" }, "none");
+        var edit = h("button", { class: "btn ghost", type: "button", onclick: function () { editStock(p); } }, "Set stock");
+        return { flash: changed, cells: [p.sku, p.name, p.category, inr(p.price), inr(p.cost), p.stock, p.days_unsold + " d",
+          p.days_to_expiry + " d", stuckCell(p.stuck), status, promo, edit] };
+      }), "No products match.");
+  }
+
+  function editStock(product) {
+    var answer = window.prompt("New stock level for " + product.name, product.stock);
+    if (answer === null) return;
+    var stock = Number(answer);
+    if (!Number.isInteger(stock) || stock < 0) return toast("Stock must be a whole number, 0 or more.");
+    request("POST", "/admin/stock", { sku: product.sku, stock: stock })
+      .then(function () { toast(product.name + " stock set to " + stock + ". Rebuild offers to re-price."); return poll(); })
+      .catch(function (err) { toast(err.message); });
+  }
+
+  function renderOrders() {
+    $("orders-count").textContent = data.kpis.orders + " order(s)";
+    table($("orders-table"),
+      [{ label: "When" }, { label: "Order" }, { label: "Customer" }, { label: "Items" }, { label: "Code" },
+       { label: "Discount", num: true }, { label: "Paid", num: true }],
+      data.orders.map(function (o) {
+        return { flash: o.isNew, cells: [when(o.created_at), o.order_id, o.customer || "guest", itemsText(o),
+          o.code ? h("code", {}, o.code) : h("span", { class: "muted" }, "none"), o.discount ? "−" + inr(o.discount) : "", inr(o.paid_total)] };
+      }), "No orders yet. Complete a checkout in the store.");
+  }
+
+  function renderLogic() {
+    var r = data.rules;
+    var tiers = r.discount_tiers.map(function (t) { return t.pct + "% at " + t.days + "+ days unsold"; }).join(", ");
+    var logic = [
+      "Dead stock = unsold for " + r.dead_stock_days + "+ days, or expiring within " + r.near_expiry_days + " days, and in stock.",
+      "Stuck score = 0.5 × days unsold (capped at 60) + 0.3 × stock (capped at 100) + 0.2 × expiry urgency.",
+      "Candidates come from vector search (top 20), the pairs_with column and order history.",
+      "Removed: non-dead items, same category as the cart product, and avoid_with conflicts.",
+      "The top 5 by final score go to the LLM (" + data.engine.llm_provider + "), which picks one and writes the message.",
+      "At checkout the whole cart is re-checked for diet conflicts. No model runs at checkout.",
+    ];
+    var pricing = [
+      "Tier: " + tiers + ".",
+      "Expiring within " + r.expiry_discount_days + " days: " + r.expiry_discount_pct + "% instead.",
+      "Capped at " + r.max_discount_pct + "%.",
+      "Margin floor: the new price must stay at or above cost + " + r.min_margin_pct + "%. The discount is lowered 1% at a time until it does.",
+      "Below 5% there is no offer.",
+      "Each code is valid " + r.promo_valid_hours + " hours, " + r.max_uses_per_code + " uses, and discounts at most " + r.max_discounted_units + " unit(s) per order.",
+    ];
+    [["logic-steps", logic], ["pricing-steps", pricing]].forEach(function (pair) {
+      var list = $(pair[0]);
+      list.textContent = "";
+      pair[1].forEach(function (step) { list.appendChild(h("li", {}, step)); });
+    });
+  }
+
+  function sourcePill(source) {
+    if (source === "llm") return h("span", { class: "pill llm" }, "LLM pick");
+    if (source === "template") return h("span", { class: "pill ok" }, "Top score");
+    return h("span", { class: "pill backup" }, "Backup");
+  }
+
+  function renderOffers() {
+    var select = $("trigger-select");
+    var current = select.value;
+    select.textContent = "";
+    offers.forEach(function (o) { select.appendChild(h("option", { value: o.trigger_sku }, o.trigger_name)); });
+    if (offers.some(function (o) { return o.trigger_sku === current; })) select.value = current;
+    renderExplain();
+
+    table($("offers-table"),
+      [{ label: "Cart product" }, { label: "Offer" }, { label: "Discount", num: true }, { label: "Price" }, { label: "Code" }, { label: "Message" }, { label: "Chosen by" }],
+      offers.map(function (o) {
+        var top = o.offers[0];
+        return { cells: [o.trigger_name, top.target_name, top.discount_pct + "%", inr(top.price) + " → " + inr(top.new_price),
+          h("code", {}, top.code), top.message, sourcePill(top.source)] };
+      }));
+  }
+
+  function renderExplain() {
+    var entry = offers.filter(function (o) { return o.trigger_sku === $("trigger-select").value; })[0];
+    table($("explain-table"),
+      [{ label: "#", num: true }, { label: "Candidate" }, { label: "Pairs-with match" }, { label: "Bought together", num: true },
+       { label: "Similarity", num: true }, { label: "Fit", num: true }, { label: "Stuck", num: true }, { label: "Final", num: true },
+       { label: "Discount" }, { label: "Price" }, { label: "Role" }],
+      (entry ? entry.offers : []).map(function (o, i) {
+        var x = o.explain;
+        var discount = o.tier_pct === o.discount_pct ? o.discount_pct + "%"
+          : o.discount_pct + "% (tier " + o.tier_pct + "%, limited by cap or floor " + inr(o.floor_price) + ")";
+        return { cells: [i + 1, o.target_name, x.pairs_match ? "Yes" : "No", x.copurchase.toFixed(2), x.similarity.toFixed(2),
+          x.fit.toFixed(2), x.stuck.toFixed(2), o.score.toFixed(2), discount, inr(o.price) + " → " + inr(o.new_price), sourcePill(o.source)] };
+      }), "No dead-stock item fits this product, so no offer is shown.");
+  }
+
+  var RULE_FIELDS = [
+    ["min_margin_pct", "Minimum margin %", "New price never goes below cost + this"],
+    ["max_discount_pct", "Maximum discount %", "Hard cap on any promo"],
+    ["dead_stock_days", "Dead-stock days", "Unsold this long counts as dead"],
+    ["near_expiry_days", "Near-expiry days", "Expiring this soon counts as dead"],
+    ["promo_valid_hours", "Code validity (hours)", ""],
+    ["max_uses_per_code", "Max uses per code", ""],
+    ["max_discounted_units", "Max discounted units per order", ""],
+  ];
+  var EXPIRY_FIELDS = [
+    ["expiry_discount_days", "Expires within (days)", ""],
+    ["expiry_discount_pct", "Discount %", "Replaces the tier discount"],
+  ];
+
+  function numberRow(field, value) {
+    var input = h("input", { type: "number", id: "rule-" + field[0], name: field[0], value: value, min: 0, required: "" });
+    input.addEventListener("input", function () { rulesDirty = true; });
+    return h("div", { class: "form-row" }, h("label", { for: "rule-" + field[0] }, field[1], field[2] ? h("small", {}, field[2]) : null), input);
+  }
+
+  function tierRow(tier) {
+    var days = h("input", { type: "number", class: "tier-days", value: tier.days, min: 1, required: "", "aria-label": "Days unsold" });
+    var pct = h("input", { type: "number", class: "tier-pct", value: tier.pct, min: 5, required: "", "aria-label": "Discount percent" });
+    var row = h("div", { class: "tier" }, "At", days, "days unsold give", pct, "% off",
+      h("button", { class: "link", type: "button", onclick: function () { row.remove(); rulesDirty = true; } }, "remove"));
+    [days, pct].forEach(function (input) { input.addEventListener("input", function () { rulesDirty = true; }); });
+    return row;
+  }
+
+  function renderRules() {
+    var r = data.rules;
+    [["rule-fields", RULE_FIELDS], ["expiry-fields", EXPIRY_FIELDS]].forEach(function (pair) {
+      var box = $(pair[0]);
+      box.textContent = "";
+      pair[1].forEach(function (field) { box.appendChild(numberRow(field, r[field[0]])); });
+    });
+    var tiers = $("tiers");
+    tiers.textContent = "";
+    r.discount_tiers.forEach(function (t) { tiers.appendChild(tierRow(t)); });
+    rulesDirty = false;
+    rulesLoaded = true;
+  }
+
+  function saveRules(event) {
+    event.preventDefault();
+    var body = {};
+    RULE_FIELDS.concat(EXPIRY_FIELDS).forEach(function (field) { body[field[0]] = Number($("rule-" + field[0]).value); });
+    body.discount_tiers = Array.prototype.map.call(document.querySelectorAll("#tiers .tier"), function (row) {
+      return { days: Number(row.querySelector(".tier-days").value), pct: Number(row.querySelector(".tier-pct").value) };
+    });
+    var status = $("rules-status"), button = $("save-rules");
+    status.className = "status";
+    status.textContent = "Saving and re-pricing…";
+    button.disabled = true;
+    request("PUT", "/admin/rules", body)
+      .then(function (res) {
+        status.textContent = "Saved. " + res.offers + " offers re-priced in " + (res.took_ms / 1000).toFixed(1) + " s.";
+        rulesLoaded = false;
+        return Promise.all([poll(), loadOffers()]);
+      })
+      .catch(function (err) { status.className = "status err"; status.textContent = err.message; })
+      .then(function () { button.disabled = false; });
+  }
+
+  function rebuild() {
+    var status = $("rebuild-status"), button = $("rebuild-btn");
+    status.className = "status";
+    status.textContent = "Rebuilding…";
+    button.disabled = true;
+    request("POST", "/admin/rebuild")
+      .then(function (res) {
+        status.textContent = "Rebuilt " + res.offers + " offers in " + (res.took_ms / 1000).toFixed(1) + " s.";
+        return Promise.all([poll(), loadOffers()]);
+      })
+      .catch(function (err) { status.className = "status err"; status.textContent = err.message; })
+      .then(function () { button.disabled = false; });
+  }
+
+  function loadOffers() {
+    return request("GET", "/admin/offers").then(function (res) { offers = res; renderOffers(); });
+  }
+
+  function setLive(ok) {
+    $("live-dot").className = ok ? "dot" : "dot off";
+    $("live-text").textContent = ok ? "Live" : "Reconnecting…";
+  }
+
+  function poll() {
+    return request("GET", "/admin/data").then(function (res) {
+      var known = seenOrders;
+      res.orders.forEach(function (o) { o.isNew = known !== null && !known[o.order_id]; });
+      var fresh = res.orders.filter(function (o) { return o.isNew; });
+      if (fresh.length) toast("New order " + fresh[0].order_id + ": " + inr(fresh[0].paid_total) + " from " + (fresh[0].customer || "guest"));
+      seenOrders = {};
+      res.orders.forEach(function (o) { seenOrders[o.order_id] = true; });
+
+      var builtChanged = data && data.engine.built_at !== res.engine.built_at;
+      data = res;
+      var e = data.engine;
+      $("engine-meta").textContent = "Offers built " + when(e.built_at) + " · LLM: " + e.llm_provider + (e.llm_provider !== "none" && e.llm_model ? " (" + e.llm_model + ")" : "");
+      renderOverview();
+      renderStock();
+      renderOrders();
+      renderLogic();
+      if (!rulesLoaded || (builtChanged && !rulesDirty)) renderRules();
+      if (builtChanged) loadOffers();
+      data.products.forEach(function (p) { lastStock[p.sku] = p.stock; });
+      setLive(true);
+    }).catch(function () { setLive(false); });
+  }
+
+  document.querySelectorAll("nav button").forEach(function (button) {
+    button.addEventListener("click", function () {
+      document.querySelectorAll("nav button").forEach(function (b) { b.setAttribute("aria-selected", String(b === button)); });
+      document.querySelectorAll("main > section").forEach(function (s) { s.hidden = s.id !== "tab-" + button.dataset.tab; });
+    });
+  });
+  $("stock-search").addEventListener("input", function () { if (data) renderStock(); });
+  $("stock-filter").addEventListener("change", function () { if (data) renderStock(); });
+  $("trigger-select").addEventListener("change", renderExplain);
+  $("rebuild-btn").addEventListener("click", rebuild);
+  $("rules-form").addEventListener("submit", saveRules);
+  $("add-tier").addEventListener("click", function () { $("tiers").appendChild(tierRow({ days: 60, pct: 30 })); rulesDirty = true; });
+
+  poll().then(loadOffers);
+  setInterval(poll, POLL_MS);
+})();
+</script>
+</body>
+</html>
